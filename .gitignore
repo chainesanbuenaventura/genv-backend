@@ -1,3 +1,5 @@
 .vercel
 .ipynb
 .env
+.venv
+node_modules
