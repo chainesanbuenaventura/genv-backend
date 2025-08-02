@@ -1,0 +1,26 @@
+[
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": {
+          "job_title": "Machine Learning Engineer",
+          "company": "Outgoing",
+          "location": "Greater Paris Metropolitan Region",
+          "contract_type": null,
+          "remote": true,
+          "salary_range": { "min": null, "max": null },
+          "responsibilities": [
+            "Implementing & Optimizing LLM-Powered Features: Integrate and fine-tune open-source Large Language Models (LLMs)…",
+            "Developing Advanced Ranking & Recommendation Algorithms: Design and implement generative and traditional ML…",
+            "Owning End-to-End Development of Scalable Platforms: Take full ownership of key features from concept to deployment…",
+            "Driving Technical Architecture & Tooling Decisions: Contribute significantly to strategic technical decisions…"
+          ],
+          "requirements": [ … ],
+          "nice_to_have": [ "Experience with Flutter, Node.js, Rust" ],
+          "description": "Shape the Future of Real-World Experiences with AI\n\nAre you an entrepreneurial software engineer…"
+        }
+      }
+    }
+  ]
+  
