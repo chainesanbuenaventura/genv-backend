@@ -1,9 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/ingest_email.py", "use": "@vercel/python" }
+    { "src": "api/ingest_email.py", "use": "@vercel/python" },
+    { "src": "api/get_emails.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "/ingest_email", "methods": ["POST"], "dest": "api/ingest_email.py" }
+    { "src": "/ingest_email", "methods": ["POST"], "dest": "api/ingest_email.py" },
+    { "src": "/emails", "methods": ["GET"], "dest": "api/get_emails.py" }
   ]
 }
