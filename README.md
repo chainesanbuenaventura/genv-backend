@@ -14,7 +14,9 @@ curl -X POST https://genv-backend-mvp.vercel.app/ingest_email \
         "name": "John Doe",
         "email_address": "john@example.com"
       }'
+```
 
+```bash
 curl -X POST http://127.0.0.1:8000/ingest_email \
   -H "Content-Type: application/json" \
   -d '{
@@ -31,6 +33,10 @@ curl -X POST http://127.0.0.1:8000/ingest_email \
 
 ### Get All Emails
 
-```bash        
+```bash       
+curl -X GET "https://genv-backend-mvp.vercel.app/emails" -H "accept: application/json" 
+```
+
+```bash
 curl -X GET "http://localhost:8000/emails" -H "accept: application/json"
 ```
