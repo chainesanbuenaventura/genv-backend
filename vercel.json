@@ -1,22 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/ingest_email.py", "use": "@vercel/python" },
-    { "src": "api/ingest_campaign.py", "use": "@vercel/python" },
-    { "src": "api/ingest_job.py", "use": "@vercel/python" },
-    { "src": "api/candidates.py", "use": "@vercel/python" },
-    { "src": "api/campaigns.py", "use": "@vercel/python" },
-    { "src": "api/get_campaign.py", "use": "@vercel/python" },
-    { "src": "api/match_candidates.py", "use": "@vercel/python" }
+    { "src": "api/ingest_email.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "/ingest_email", "methods": ["POST"], "dest": "api/ingest_email.py" },
-    { "src": "/ingest_campaign", "methods": ["POST"], "dest": "api/ingest_campaign.py" },
-    { "src": "/ingest_job", "methods": ["POST"], "dest": "api/ingest_job.py" },
-    { "src": "/candidates", "methods": ["GET"], "dest": "api/candidates.py" },
-    { "src": "/campaigns", "methods": ["GET"], "dest": "api/campaigns.py" },
-    { "src": "/get_campaign/(.*)", "methods": ["GET"], "dest": "api/get_campaign.py?campaign_id=$1" },
-    { "src": "/get_campaign", "methods": ["GET"], "dest": "api/get_campaign.py" },
-    { "src": "/match_candidates", "methods": ["GET"], "dest": "api/match_candidates.py" }
+    { "src": "/ingest_email", "methods": ["POST"], "dest": "api/ingest_email.py" }
   ]
 }

@@ -2,4 +2,3 @@ fastapi
 uvicorn[standard]
 neo4j
 pydantic
-langchain_neo4j
