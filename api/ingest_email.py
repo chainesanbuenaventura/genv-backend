@@ -3,6 +3,8 @@ from pydantic import BaseModel
 from neo4j import GraphDatabase
 from typing import Optional
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
 # Neo4j connection setup
 # Load from .env
