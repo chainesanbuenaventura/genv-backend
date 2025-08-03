@@ -7,12 +7,10 @@ from langchain.chains import GraphCypherQAChain
 import os
 from dotenv import load_dotenv
 
-# Load .env for local dev
 load_dotenv()
 
 app = FastAPI()
 
-# Request and response schema
 class QuestionRequest(BaseModel):
     question: str
     verbose: Optional[bool] = False
@@ -24,7 +22,6 @@ class QuestionResponse(BaseModel):
 @app.post("/chat", response_model=QuestionResponse)
 async def chat(request: QuestionRequest):
     try:
-        # Initialize Neo4j connection and LLM
         kg = Neo4jGraph(
             url=os.getenv("NEO4J_URI"),
             username=os.getenv("NEO4J_USERNAME"),
@@ -32,7 +29,6 @@ async def chat(request: QuestionRequest):
         )
         llm = ChatOpenAI(model="gpt-4", temperature=0)
 
-        # Create Graph QA chain
         chain = GraphCypherQAChain.from_llm(
             llm=llm,
             graph=kg,
@@ -40,7 +36,6 @@ async def chat(request: QuestionRequest):
             allow_dangerous_requests=True
         )
 
-        # Run query
         result = chain.run(request.question)
 
         return QuestionResponse(
