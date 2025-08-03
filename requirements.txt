@@ -3,4 +3,4 @@ uvicorn[standard]
 neo4j
 pydantic
 langchain-community
-langchain_openai
+langchain-openai
